@@ -15,8 +15,8 @@ void init()
 int main() 
 {
   unsigned int uart0_var = 0x11484;
-	int pass[4] = {1,2,5,4};//correct password from guest
-  init();//using the same init function of the compilation code
+	int pass[4] = {1,2,5,4};//correct password from guest if you change any value, this will be wrong password
+  init();
   while (1) 
   {
     if ((uart0_var & 0x03) == 0x0) //Occupied state
